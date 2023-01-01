@@ -1,0 +1,119 @@
+1.a)Write a constructor for the class Movie, which takes a String representing the title of the movie, a String 
+representing the studio, and a String representing the rating as its arguments, and sets the respective class 
+properties to these values.
+
+        class Movie{
+            constructor(title, studio, rating){
+                this.title=title;
+                this.studio=studio;
+                this.rating=rating 
+            }
+        }
+
+b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is 
+provided.
+
+        class Movie{
+            constructor(title, studio, rating){
+                this.title=title;
+                this.studio=studio;
+                this.rating=rating || 'PG'
+            }
+        }
+
+
+
+c) Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only 
+those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. 
+The returned array need not be full.
+
+            class Movie{
+            constructor(title){
+                this.title=title;
+            }
+            getPG(){
+                let x=this.title
+                let y=[]
+                for(var i=0; i<x.length; i++){
+                    console.log(x[i].rating)
+                    if(x[i].rating =='PG'){
+                        y.push(x[i].movie)
+                        }
+                    }
+                    return y;
+                }
+            }
+
+d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio
+ “Eon Productions”, and the rating “PG­13”
+
+
+        class Movie{
+        constructor(title, studio, rating){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating 
+            }
+        }
+
+        var e = new Movie('Casino Royale','Eon Productions', 'PG­13')
+
+2.Convert the UML diagram to Typescript class. - use number for double
+
+            class Circle{
+                constructor(radius, color){
+                    this.radius=radius;
+                    this.color=color;
+                }
+                getColor(){
+                    return `The color of the circle is ${this.color}`;
+                }
+                getArea(){
+                    let y = 3.14*this.radius*this.radius;
+                    return y;
+                }
+                getCircumference(){
+                    let x = 2*3.14*this.radius;
+                    return x;
+                }
+            }
+
+            var e = new Circle(5,'red')
+
+            console.log(e.getColor())
+            console.log(e.getArea())
+            console.log(e.getCircumference())
+
+3.Write a “person” class to hold all the details.
+
+            class Person{
+                constructor(name, age, designation, address){
+                    this.name=name;
+                    this.age=age;
+                    this.designation=designation;
+                    this.address=address;
+                }
+            }
+
+            var e = new Person('John', 28, 'Software Engineer', 'Chennai')
+
+            console.log(e)
+
+
+4.write a class to calculate the uber price.
+
+            class Uberprice{
+                constructor(distance){
+                    this.distace=distance;
+                }
+                price(){
+                    if(this.distace<=20){
+                        return (this.distace*12)
+                    }
+                    return (this.distace*18)
+                }
+            }
+
+            var e = new Uberprice(20)
+
+            console.log(e.price())
